@@ -37,6 +37,7 @@ public struct Mock: Equatable {
         case pdf
         case mp4
         case zip
+        case octetStream
         
         var headerValue: String {
             switch self {
@@ -52,6 +53,8 @@ public struct Mock: Equatable {
                 return "video/mp4"
             case .zip:
                 return "application/zip"
+            case .octetStream:                
+                return "application/octet-stream"                
             }
         }
     }
